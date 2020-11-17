@@ -1,4 +1,4 @@
-# MERN-Locations-front
+# MERN-location-front
 
 ## Collaborators:
 ### 1. David Ornelas
