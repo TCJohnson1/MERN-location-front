@@ -15,5 +15,7 @@ main {
 }
 
 #my-list-button {
-  background-color: #bf4e30;
+  background-color: #ff5722;
+  border-radius: 10px;
+  font-size: 16px;
 }

@@ -10,9 +10,14 @@ export default class App extends Component {
 
         <main>
           <div className="my-list-button">
-            <a id="my-list-button" className="waves-effect waves-light btn">
+            <button
+              id="my-list-button"
+              class="btn waves-effect waves-orange darken-4"
+              type="submit"
+              name="action"
+            >
               My List
-            </a>
+            </button>
           </div>
         </main>
 
