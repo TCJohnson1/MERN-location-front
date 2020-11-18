@@ -8,7 +8,8 @@ main {
   min-height: calc(100vh - 150px);
 }
 
-.my-list-button {
+.my-list-button,
+.cool-image {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -18,4 +19,8 @@ main {
   background-color: #ff5722;
   border-radius: 10px;
   font-size: 16px;
+}
+
+#cool-image {
+  width: 50%;
 }

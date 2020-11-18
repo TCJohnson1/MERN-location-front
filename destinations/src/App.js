@@ -19,6 +19,13 @@ export default class App extends Component {
               My List
             </button>
           </div>
+          <div className="cool-image">
+            <img
+              id="cool-image"
+              src="https://cdn.pixabay.com/photo/2016/06/25/12/48/go-pro-1478810_1280.jpg"
+              alt="luggage"
+            ></img>
+          </div>
         </main>
 
         <Footer />
