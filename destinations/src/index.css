@@ -8,17 +8,12 @@ main {
   min-height: calc(100vh - 150px);
 }
 
-button {
-  background-color: #bf4e30;
-  color: #ffffff;
-  border-radius: 5px;
-  border: none;
-  padding: 5px 50px;
-  font-size: 20px;
-}
-
 .my-list-button {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+}
+
+#my-list-button {
+  background-color: #bf4e30;
 }
