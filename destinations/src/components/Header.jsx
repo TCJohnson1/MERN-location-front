@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+import M from  'materialize-css/dist/js/materialize.min.js';
 
 export default class Header extends Component {
+
+    componentDidMount() {
+        let sidenav = document.querySelector('#slide-out');
+        M.Sidenav.init(sidenav, {});
+      }
+
   render() {
     return (
       <header>
@@ -8,9 +15,9 @@ export default class Header extends Component {
           <div class="nav-wrapper">
           
             <a href="#!" class="brand-logo teal-text lighten-5">
-            <i class=" large material-icons deep-orange-text accent-4">airplanemode_active</i>DREAM DESTINATIONS
+                  DREAM DESTINATIONS
             </a>
-            <a href="#1" data-target="mobile-demo" class="sidenav-trigger">
+            <a href="#1" data-target="slide-out" class="sidenav-trigger">
               <i class="material-icons deep-orange-text accent-4">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
@@ -27,7 +34,7 @@ export default class Header extends Component {
           </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav" id="slide-out">
           <li>
             <a href="#1" class="waves-effect waves-light teal-text lighten-5">Home</a>
           </li>
