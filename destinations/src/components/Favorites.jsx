@@ -8,13 +8,27 @@ export default class Favorites extends Component {
                         <table>
                               <thead>
                                     <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Image</th>
                                     </tr>
                               </thead>
+                              <tbody>
+                                    {this.props.location.map((location, index) => {
+                                          return(
+                                                <tr key={index}>
+                                                      <td>{location.name}</td>
+                                                      <td>{location.description}</td>
+                                                      <td>{location.image}</td>
+                                                </tr>
+                                          )
+                                    })}
+                              </tbody>
                         </table>
                   </div>
             )
       }
 }
+
+
+export default FavoriteLocations
