@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Header extends Component {
   render() {
     return (
-      <div>
+      <header>
         <nav class="teal darken-4">
           <div class="nav-wrapper">
           
@@ -15,13 +15,13 @@ export default class Header extends Component {
             </a>
             <ul class="right hide-on-med-and-down">
               <li>
-                <a href="#1" class="teal-text lighten-5">Home</a>
+                <a href="#1" class="waves-effect waves-light teal-text lighten-5">Home</a>
               </li>
               <li>
-                <a href="#1" class="teal-text lighten-5">My Favorites</a>
+                <a href="#1" class="waves-effect waves-light teal-text lighten-5">My Favorites</a>
               </li>
               <li>
-                <a href="#1" class="teal-text lighten-5">Signup/Login</a>
+                <a href="#1" class="waves-effect waves-light teal-text lighten-5">Signup/Login</a>
               </li>
             </ul>
           </div>
@@ -29,16 +29,16 @@ export default class Header extends Component {
 
         <ul class="sidenav" id="mobile-demo">
           <li>
-            <a href="#1" class="teal-text lighten-5">Home</a>
+            <a href="#1" class="waves-effect waves-light teal-text lighten-5">Home</a>
           </li>
           <li>
-            <a href="#1" class="teal-text lighten-5">My Favorites</a>
+            <a href="#1" class="waves-effect waves-light teal-text lighten-5">My Favorites</a>
           </li>
           <li>
-            <a href="#1" class="teal-text lighten-5">Signup/Login</a>
+            <a href="#1" class="waves-effect waves-light teal-text lighten-5">Signup/Login</a>
           </li>
         </ul>
-      </div>
+      </header>
     );
   }
 }
