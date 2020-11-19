@@ -36,11 +36,25 @@ export default class App extends Component {
             >
               Destination Roulette
             </button>
-            <div class="find-destination">
-              <form>
-                <div class="row"></div>
-              </form>
-            </div>
+          </div>
+          <div className="find-destination">
+            <form>
+              <h5>Find by Name</h5>
+              <input
+                className="name-of-destination"
+                id="name-of-destination"
+                type="text"
+                placeholder="Name of Destination"
+              ></input>
+              <button
+                id="add-to-list-button"
+                class="btn waves-effect waves-orange darken-4"
+                type="submit"
+                name="action"
+              >
+                Add to my List
+              </button>
+            </form>
           </div>
         </main>
 

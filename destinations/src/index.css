@@ -10,14 +10,16 @@ main {
 
 .my-list-button,
 .cool-image,
-.random-destination-button {
+.random-destination-button,
+.find-destination {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
 #my-list-button,
-#random-destination-button {
+#random-destination-button,
+#add-to-list-button {
   background-color: #ff5722;
   border-radius: 10px;
   font-size: 16px;
@@ -30,4 +32,9 @@ main {
 .horizontal-bar {
   margin-top: 35px;
   border: 5px solid #fff9c4;
+}
+
+.find-destination {
+  margin-bottom: 30px;
+  text-align: center;
 }
