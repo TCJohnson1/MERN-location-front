@@ -12,7 +12,7 @@ export default class App extends Component {
       <Header />
       
         <main>
-        <h1> MERN Destinations</h1>
+        
         </main>
 
         <Footer />
