@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Footer from './Footer'
-import {BrowserRouter as Router, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 const baseURL = "http://localhost:3001";
 
@@ -45,9 +45,9 @@ export default class NewForm extends Component {
     return (
         <>
         <Header/>
-        <Router>
-            <Link to='/' > GO HOME</Link>
-        </Router>
+        
+            <Link to="/" > GO HOME</Link>
+        
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
