@@ -25,11 +25,11 @@ export default class Header extends Component {
                         </Link>
                         <ul className="right hide-on-med-and-down">
                             <li>
-                                <Link to="#1" className="waves-effect waves-light teal-text lighten-5">Home
+                                <Link to="/" className="waves-effect waves-light teal-text lighten-5">Home
                                 </Link>
                             </li>
                             <li>
-                                <Link to="#1" className="waves-effect waves-light teal-text lighten-5">My Favorites
+                                <Link to="/favorites" className="waves-effect waves-light teal-text lighten-5">My Favorites
                                 </Link>
                             </li>
                             <li>
@@ -41,10 +41,10 @@ export default class Header extends Component {
 
                 <ul className="sidenav" id="slide-out">
                     <li>
-                        <Link to="#1" className="waves-effect waves-light teal-text lighten-5">Home</Link>
+                        <Link to="/" className="waves-effect waves-light teal-text lighten-5">Home</Link>
                     </li>
                     <li>
-                        <Link to="#1" className="waves-effect waves-light teal-text lighten-5">My Favorites</Link>
+                        <Link to="/favorites" className="waves-effect waves-light teal-text lighten-5">My Favorites</Link>
                     </li>
                     <li>
                         <Link to="#1" className="waves-effect waves-light teal-text lighten-5">Signup/Login</Link>
