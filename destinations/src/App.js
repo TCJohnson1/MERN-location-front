@@ -26,6 +26,22 @@ export default class App extends Component {
               alt="luggage"
             ></img>
           </div>
+          <hr className="horizontal-bar"></hr>
+          <div className="random-destination-button">
+            <button
+              id="random-destination-button"
+              class="btn waves-effect waves-orange darken-4"
+              type="submit"
+              name="action"
+            >
+              Destination Roulette
+            </button>
+            <div class="find-destination">
+              <form>
+                <div class="row"></div>
+              </form>
+            </div>
+          </div>
         </main>
 
         <Footer />
