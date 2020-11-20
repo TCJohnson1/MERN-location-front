@@ -1,26 +1,27 @@
 import React, { Component } from "react";
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 
 export default class Footer extends Component {
   render() {
     return (
-      <footer class="page-footer teal darken-4">
-        <div class="container">
-          <div class="row">
-            <div class="col l4 s12">
-              <h5 class="deep-orange-text accent-4">About</h5>
-              <p class="teal-text lighten-5">
+      <footer className="page-footer teal darken-4">
+        <div className="container">
+          <div className="row">
+            <div className="col l4 s12">
+              <h5 className="deep-orange-text accent-4">About</h5>
+              <p className="teal-text lighten-5">
                 Dream Destinations was created as our third project for General
                 Assembly's Software Engineering Immersive program. We decided to
                 use the MERN stack to develop an application to save a users
                 favorite destinations to a bucket list.
               </p>
             </div>
-            <div class="col l4 s12">
-              <h5 class="deep-orange-text accent-4">Documentation</h5>
+            <div className="col l4 s12">
+              <h5 className="deep-orange-text accent-4">Documentation</h5>
               <ul>
                 <li>
                   <a
-                    class="waves-effect waves-light btn-flat teal-text lighten-5"
+                    className="waves-effect waves-light btn-flat teal-text lighten-5"
                     href="https://github.com/TCJohnson1/MERN-location-front"
                   >
                     Front-end
@@ -28,7 +29,7 @@ export default class Footer extends Component {
                 </li>
                 <li>
                   <a
-                    class="waves-effect waves-light btn-flat teal-text lighten-5"
+                    className="waves-effect waves-light btn-flat teal-text lighten-5"
                     href="https://github.com/davidornelas11/MERN-location-app"
                   >
                     Back-end
@@ -36,12 +37,12 @@ export default class Footer extends Component {
                 </li>
               </ul>
             </div>
-            <div class="col l4 s12">
-              <h5 class="deep-orange-text accent-4">Meet the Team!</h5>
+            <div className="col l4 s12">
+              <h5 className="deep-orange-text accent-4">Meet the Team!</h5>
               <ul>
                 <li>
                   <a
-                    class="waves-effect waves-light btn-flat teal-text lighten-5"
+                    className="waves-effect waves-light btn-flat teal-text lighten-5"
                     href="http://linkedin.com/in/davidornelas-engineer"
                   >
                     David Ornelas
@@ -49,7 +50,7 @@ export default class Footer extends Component {
                 </li>
                 <li>
                   <a
-                    class="waves-effect waves-light btn-flat teal-text lighten-5"
+                    className="waves-effect waves-light btn-flat teal-text lighten-5"
                     href="https://www.linkedin.com/in/fabiolampina/"
                   >
                     Fabiola Pina
@@ -57,7 +58,7 @@ export default class Footer extends Component {
                 </li>
                 <li>
                   <a
-                    class="waves-effect waves-light btn-flat teal-text lighten-5"
+                    className="waves-effect waves-light btn-flat teal-text lighten-5"
                     href="https://www.linkedin.com/in/sarakendig/"
                   >
                     Sara Kendig
@@ -65,7 +66,7 @@ export default class Footer extends Component {
                 </li>
                 <li>
                   <a
-                    class="waves-effect waves-light btn-flat teal-text lighten-5"
+                    className="waves-effect waves-light btn-flat teal-text lighten-5"
                     href="https://www.linkedin.com/in/terrence-c-johnson2/"
                   >
                     Terrence Johnson
@@ -75,8 +76,8 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-        <div class="footer-copyright  teal darken-3 valign center">
-          <div class="container teal-text lighten-5">
+        <div className="footer-copyright  teal darken-3 valign center">
+          <div className="container teal-text lighten-5">
             © 2020 All Rights Reserved
           </div>
         </div>
