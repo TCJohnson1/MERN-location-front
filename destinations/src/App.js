@@ -1,40 +1,95 @@
-import React, { Component } from 'react'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Maps from './components/Maps'
+import React, { Component } from "react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
+import NewForm from './components/NewForm'
+import Page404 from "./components/Page404";
+import LandingPage from "./components/Landingpage";
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom'
+import Favorites from "./components/Favorites";
+
+const baseURL = "http://localhost:3001";
+
+
+
 
 
 export default class App extends Component {
-
-  constructor (props) { //Google Map API
+  constructor(props) {
     super(props)
     this.state = {
-      name: '',
-      image: '',
-      review: '',
-      rating: '',
-      favotires: []
+      locations: []
     }
+
+    this.getLocations = this.getLocations.bind(this)
+    this.handleAddLocations = this.handleAddLocations.bind(this)
+    this.deleteLocation = this.deleteLocation.bind(this)
   }
-  //The first API will pull the information and have the geo location. We can then pull that geotag and plug it into the Google maps API to show the pin. Google-maps-react
+
+  componentDidMount() {
+    this.getLocations()
+  }
+
+  handleAddLocations(location) {
+    this.setState({
+      locations: this.state.locations.concat(location)
+    })
+  }
+
+  getLocations() {
+    fetch(baseURL + '/locations')
+      .then(data => {
+        return data.json()
+      }).then(parsedData => {
+        this.setState({
+          locations: parsedData
+        })
+      })
+  }
+
+  deleteLocation(id) {
+    fetch(baseURL + '/locations/' + id, {
+      method: 'DELETE'
+    }).then(response => {
+      const findIndex = this.state.locations.findIndex(location => location._id === id)
+      const copyLocations = [...this.state.locations]
+      copyLocations.splice(findIndex, 1)
+      this.setState({ locations: copyLocations })
+    })
+  }
 
   render() {
     return (
+      <Router>
+        <div>
 
-      <div>
+          <Switch>
+            <Route path='/newdestination' >
+              <NewForm
+                deleteLocation={this.deleteLocation}
+                locations={this.state.locations}
+                handleAddLocations={this.handleAddLocations} />
+            </Route>
+            <Route path='/favorites'  >
+              <Favorites
+              locations = {this.state.locations}
+              />
+            </Route>
+            <Route path='/' exact component={LandingPage} />
+            <Route path='/404' component={Page404} />
+            <Redirect to='/404' />
 
-      <Header />
-      
-        <main>
-        <h1> MERN Destinations</h1>
-        <Maps />
-        </main>
+          </Switch>
 
-        <Footer />
-    
-        
-      </div>
-      
-    )
+
+        </div>
+      </Router>
+    );
   }
 }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export default class Show extends Component {
       constructor(props) {
             super(props)
             this.state = {
-                  favorite = false
+                  favorite: false
             }
             this.toggleFavorite = this.toggleFavorite.bind(this)
       }

@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from './Footer';
+import Header from './Header';
 
 export default class Favorites extends Component {
       render() {
             return (
                   <div>
+                  <Header />
                         <h3>Favorites</h3>
                         <table>
                               <thead>
@@ -14,9 +18,9 @@ export default class Favorites extends Component {
                                     </tr>
                               </thead>
                               <tbody>
-                                    {this.props.location.map((location, index) => {
+                                    {this.props.location.map((location) => {
                                           return(
-                                                <tr key={index}>
+                                                <tr key={location._id}>
                                                       <td>{location.name}</td>
                                                       <td>{location.description}</td>
                                                       <td>{location.image}</td>
@@ -25,6 +29,7 @@ export default class Favorites extends Component {
                                     })}
                               </tbody>
                         </table>
+                  <Footer />
                   </div>
             )
       }
