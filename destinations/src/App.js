@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import NewDestination from './components/NewDestination.js'
+//Pages to render
+import NewForm from './components/NewForm'
+import Page404 from "./components/Page404";
+import LandingPage from "./components/Landingpage";
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom'
+
 const baseURL = "http://localhost:3001";
+
+
+
+
 
 export default class App extends Component {
   constructor(props) {
@@ -10,9 +25,10 @@ export default class App extends Component {
     this.state = {
       locations: []
     }
-  
+
     this.getLocations = this.getLocations.bind(this)
     this.handleAddLocations = this.handleAddLocations.bind(this)
+    this.deleteLocation = this.deleteLocation.bind(this)
   }
 
   componentDidMount() {
@@ -27,70 +43,47 @@ export default class App extends Component {
 
   getLocations() {
     fetch(baseURL + '/locations')
-    .then(data => {
-      return data.json()
-    }).then(parsedData => {
-      this.setState({
-        locations: parsedData
+      .then(data => {
+        return data.json()
+      }).then(parsedData => {
+        this.setState({
+          locations: parsedData
+        })
       })
+  }
+
+  deleteLocation(id) {
+    fetch(baseURL + '/locations/' + id, {
+      method: 'DELETE'
+    }).then(response => {
+      const findIndex = this.state.locations.findIndex(location => location._id === id)
+      const copyLocations = [...this.state.locations]
+      copyLocations.splice(findIndex, 1)
+      this.setState({ locations: copyLocations })
     })
   }
 
   render() {
     return (
-      <div>
-        <Header />
+      <Router>
+        <div>
 
-        <main>
-        <div  className="container">
-          <div className="my-list-button">
-            <button
-              id="my-list-button"
-              className="btn waves-effect waves-orange darken-4"
-              type="submit"
-              name="action"
-            >
-              My List
-            </button>
-          </div>
-          <div className="cool-image">
-            <img
-              id="cool-image"
-              src="https://cdn.pixabay.com/photo/2016/06/25/12/48/go-pro-1478810_1280.jpg"
-              alt="luggage"
-            ></img>
-          </div>
-          <hr className="horizontal-bar"></hr>
-          <div>
-         
-          <NewDestination handleAddLocations={this.handleAddLocations} />
-        <table className="centered">
-        <thead>
-          <tr>
-              <th>Name</th>
-              <th>description</th>
-          </tr>
-        </thead>
-          <tbody>
-            {
-              this.state.locations.map(location => {
-                return (
-                  <tr>
-                    <td key={location._id}> <p>{location.name}</p> </td>
-                    <td key={location._id}> <p>{location.description}</p> </td>
-                  </tr>
-                )
-              })
-            }
-          </tbody>
-        </table>
+          <Switch>
+            <Route path='/newdestination' >
+              <NewForm
+                deleteLocation={this.deleteLocation}
+                locations={this.state.locations}
+                handleAddLocations={this.handleAddLocations} />
+            </Route>
+            <Route path='/' exact component={LandingPage} />
+            <Route path='/404' component={Page404} />
+            <Redirect to='/404' />
 
-</div>
-          </div>
-        </main>
+          </Switch>
 
-        <Footer />
-      </div>
+
+        </div>
+      </Router>
     );
   }
 }
