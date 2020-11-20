@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Maps from './components/Maps'
 
 
 export default class App extends Component {
@@ -8,15 +9,10 @@ export default class App extends Component {
   constructor (props) { //Google Map API
     super(props)
     this.state = {
-      // baseURL: 'http://www.xxxxxxx.com/?',
-      // apikey: 'apikey=' + 'xxxxxxx',
-      // query: '&t=',
-      // locationTitle: '',
-      // searchURL: '',
-      // location: {}
       name: '',
-      description: '',
       image: '',
+      review: '',
+      rating: '',
       favotires: []
     }
   }
@@ -31,6 +27,7 @@ export default class App extends Component {
       
         <main>
         <h1> MERN Destinations</h1>
+        <Maps />
         </main>
 
         <Footer />
