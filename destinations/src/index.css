@@ -7,6 +7,14 @@ body {
 main {
   min-height: calc(100vh - 150px);
 }
+button {
+  border-radius: 10px;
+  font-size: 16px;
+}
+p {
+  width: 400px;
+  
+}
 
 .my-list-button,
 .cool-image,
@@ -17,8 +25,14 @@ main {
   justify-content: center;
 }
 
+#random-destination-button {
+  background-color: #004d40;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
 #my-list-button,
-#random-destination-button,
+#adddestination,
 #add-to-list-button {
   background-color: #ff5722;
   border-radius: 10px;
@@ -38,3 +52,4 @@ main {
   margin-bottom: 30px;
   text-align: center;
 }
+
