@@ -6,7 +6,7 @@ export default class Show extends Component {
             this.state = {
                   favorite = false
             }
-            this.toggleFavorite = this.toggleFavorite.bing(this)
+            this.toggleFavorite = this.toggleFavorite.bind(this)
       }
       toggleFavorite() {
             this.setState({favorite: true})
