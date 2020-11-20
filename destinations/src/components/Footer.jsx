@@ -6,7 +6,7 @@ export default class Footer extends Component {
         return (
 
             <footer className="page-footer teal darken-4">
-                <Router>
+                
                 <div className="container">
                     <div className="row">
                         <div className="col l4 s12">
@@ -36,7 +36,7 @@ export default class Footer extends Component {
                         © 2020 All Rights Reserved
             </div>
                 </div>
-                </Router>
+                
             </footer>
 
         )

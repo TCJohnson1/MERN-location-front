@@ -12,12 +12,12 @@ export default class Header extends Component {
     render() {
         return (
             <header>
-                <Router>
+                
                 <nav className="teal darken-4">
                     <div className="nav-wrapper">
                         
 
-                        <Link to="#!" className="brand-logo teal-text lighten-5">
+                        <Link to="/" className="brand-logo teal-text lighten-5">
                             DREAM DESTINATIONS
             </Link>
                         <Link to="#1" data-target="slide-out" className="sidenav-trigger">
@@ -51,7 +51,7 @@ export default class Header extends Component {
                         
                     </li>
                 </ul>
-                </Router>
+                
             </header>
         );
     }

@@ -38,3 +38,7 @@ main {
   margin-bottom: 30px;
   text-align: center;
 }
+
+img {
+  max-width: 20vw;
+}

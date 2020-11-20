@@ -14,7 +14,7 @@ export default class LandingPage extends Component {
 
                 <main>
                     <div className="my-list-button">
-                        <Router>
+                        
                             <a
                                 href='/newdestination'
                                 id="my-list-button"
@@ -22,7 +22,7 @@ export default class LandingPage extends Component {
                             >
                                 My List/ add new
             </a>
-                        </Router>
+                        
                     </div>
                     <div className="cool-image">
                         <img
