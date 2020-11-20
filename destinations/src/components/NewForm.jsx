@@ -109,7 +109,7 @@ export default class NewForm extends Component {
                             ) : ( <div className="row">
                             <div className="col s12 m5">
                               <div className="card-panel brown lighten-3">
-                                <span className="white-text">No locations to display. Try Adding one with the form above
+                                <span className="white-text">No locations to display. Try Adding one with the form above 
                                 </span>
                               </div>
                             </div>
