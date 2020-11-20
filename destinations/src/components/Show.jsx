@@ -5,7 +5,7 @@ export default class Show extends Component {
       constructor(props) {
             super(props)
             this.state = {
-                  favorite = false
+                  favorite: false
             }
             this.toggleFavorite = this.toggleFavorite.bind(this)
       }
