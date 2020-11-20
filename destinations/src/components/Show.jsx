@@ -19,7 +19,7 @@ export default class Show extends Component {
                 <div>
                      <Header />
                   <div className="container">
-                  <tr key={ this.props.index }
+                  <tr key={ this.props.id }
                         onClick={ ()=> { this.props.addFavoriteLocation(this.props.location); this.toggleFavorite() }}>
                         <td onDoubleClick={() => this.props.handleDelete(this.props.id)} >{ this.props.locations.name }</td>
                         <td>{ this.props.locations.description }</td>

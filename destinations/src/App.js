@@ -83,7 +83,11 @@ export default class App extends Component {
               locations = {this.state.locations}
               />
             </Route>
-            <Route path='/show' exact component={Show} />
+            <Route path='/show' exact component={Show} >
+            <Show
+            locations = {this.state.locations}
+            />
+            </Route>
             <Route path='/404' component={Page404} />
             <Redirect to='/404' />
 
