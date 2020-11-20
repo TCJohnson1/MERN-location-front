@@ -18,10 +18,17 @@ export default class Header extends Component {
                         
 
                         <Link to="/" className="brand-logo teal-text lighten-5">
+<<<<<<< HEAD
                         ✈️DREAM DESTINATIONS✈️
             </Link>
                         <Link to="#1" data-target="slide-out" className="sidenav-trigger">
                             <i className="material-icons deep-orange-text accent-4">menu</i>
+=======
+                         DREAM DESTINATIONS
+            </Link>
+                        <Link to="#1" data-target="slide-out" className="sidenav-trigger">
+                            <i className="material-icons deep-orange-text accent-4">menu</i> .
+>>>>>>> ac62be546f63f27092b7267734c6d3caca999670
                         </Link>
                         <ul className="right hide-on-med-and-down">
                             <li>
@@ -55,4 +62,8 @@ export default class Header extends Component {
             </header>
         );
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ac62be546f63f27092b7267734c6d3caca999670
