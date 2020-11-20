@@ -53,3 +53,11 @@ button {
   text-align: center;
 }
 
+#newform,
+#favoriteimg {
+  max-width: 150px;
+}
+
+#cardheader {
+  color: #ff5722;
+}

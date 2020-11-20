@@ -91,7 +91,7 @@ export default class NewForm extends Component {
             />
           </form>
 
-          <table className="centered">
+          <table className="centered responsive-table">
             <thead>
               <tr>
                 <th>Name</th>
@@ -115,7 +115,7 @@ export default class NewForm extends Component {
                         </td>
                         <td>
                           {" "}
-                          <img src={location.image} alt={location.name}></img>
+                          <img id='newform' src={location.image} alt={location.name}></img>
                         </td>
                         <td
                           className="waves-effect waves-light btn orange darken-4 white-text"

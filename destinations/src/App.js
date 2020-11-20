@@ -78,7 +78,11 @@ export default class App extends Component {
                 handleAddLocations={this.handleAddLocations} />
             </Route>
             <Route path='/' exact component={LandingPage} />
-            <Route path='/favorites' exact component={Favorites} />
+            <Route path='/favorites'  >
+              <Favorites
+              locations = {this.state.locations}
+              />
+            </Route>
             <Route path='/show' exact component={Show} />
             <Route path='/404' component={Page404} />
             <Redirect to='/404' />
