@@ -12,6 +12,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom'
+import Favorites from "./components/Favorites";
 
 const baseURL = "http://localhost:3001";
 
@@ -74,6 +75,11 @@ export default class App extends Component {
                 deleteLocation={this.deleteLocation}
                 locations={this.state.locations}
                 handleAddLocations={this.handleAddLocations} />
+            </Route>
+            <Route path='/favorites'  >
+              <Favorites
+              locations = {this.state.locations}
+              />
             </Route>
             <Route path='/' exact component={LandingPage} />
             <Route path='/404' component={Page404} />

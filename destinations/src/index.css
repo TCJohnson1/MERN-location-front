@@ -7,8 +7,6 @@ body {
 main {
   min-height: calc(100vh - 150px);
 }
-<<<<<<< HEAD
-=======
 button {
   border-radius: 10px;
   font-size: 16px;
@@ -17,7 +15,6 @@ button {
   width: 400px;
   
 }
->>>>>>> ac62be546f63f27092b7267734c6d3caca999670
 
 .my-list-button,
 .cool-image,
@@ -28,10 +25,6 @@ button {
   justify-content: center;
 }
 
-<<<<<<< HEAD
-#my-list-button,
-#random-destination-button,
-=======
 #random-destination-button {
   background-color: #004d40;
   border-radius: 10px;
@@ -40,7 +33,6 @@ button {
 
 #my-list-button,
 #adddestination,
->>>>>>> ac62be546f63f27092b7267734c6d3caca999670
 #add-to-list-button {
   background-color: #ff5722;
   border-radius: 10px;
@@ -50,7 +42,6 @@ button {
 #cool-image {
   width: 50%;
 }
-<<<<<<< HEAD
 
 .horizontal-bar {
   margin-top: 35px;
@@ -62,19 +53,3 @@ button {
   text-align: center;
 }
 
-img {
-  max-width: 20vw;
-}
-=======
-
-.horizontal-bar {
-  margin-top: 35px;
-  border: 5px solid #fff9c4;
-}
-
-.find-destination {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
->>>>>>> ac62be546f63f27092b7267734c6d3caca999670
