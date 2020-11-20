@@ -21,7 +21,7 @@ export default class Header extends Component {
                          DREAM DESTINATIONS
             </Link>
                         <Link to="#1" data-target="slide-out" className="sidenav-trigger">
-                            <i className="material-icons deep-orange-text accent-4">menu</i>
+                            <i className="material-icons deep-orange-text accent-4">menu</i> .
                         </Link>
                         <ul className="right hide-on-med-and-down">
                             <li>

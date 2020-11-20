@@ -50,7 +50,9 @@ export default class NewForm extends Component {
         return (
             <>
                 <Header />
+                
                 <div className='container'>
+                <h1>New Destination</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Name</label>
                     <input
@@ -81,7 +83,7 @@ export default class NewForm extends Component {
                         value={this.state.image}
                         placeholder="image"
                     />
-                    <input className='waves-effect waves-light btn orange darken-4 white-text' type="submit" value="Add Destination" />
+                    <input id='add destination' className='waves-effect waves-light btn orange darken-4 white-text' type="submit" value="Add Destination" />
                 </form>
                 <table className="centered">
                     <thead>
