@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
                 id="my-list-button"
                 className="btn waves-effect waves-orange darken-4"
               >
-                My List/ add new
+                My List | Add New
               </a>
             </div>
             <div className="cool-image">
