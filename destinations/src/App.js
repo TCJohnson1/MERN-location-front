@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import NewForm from './components/NewForm'
 import Page404 from "./components/Page404";
 import LandingPage from "./components/Landingpage";
+import Favorites from "./components/Favorites";
+import Show from "./components/Show";
 import {
   BrowserRouter as Router,
   Link,
@@ -76,6 +78,8 @@ export default class App extends Component {
                 handleAddLocations={this.handleAddLocations} />
             </Route>
             <Route path='/' exact component={LandingPage} />
+            <Route path='/favorites' exact component={Favorites} />
+            <Route path='/show' exact component={Show} />
             <Route path='/404' component={Page404} />
             <Redirect to='/404' />
 
