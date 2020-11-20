@@ -83,13 +83,13 @@ export default class NewForm extends Component {
                         value={this.state.image}
                         placeholder="image"
                     />
-                    <input id='add destination' className='waves-effect waves-light btn orange darken-4 white-text' type="submit" value="Add Destination" />
+                    <input id='adddestination' className='waves-effect waves-light btn orange darken-4 white-text' type="submit" value="Add Destination" />
                 </form>
                 <table className="centered">
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>description</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
