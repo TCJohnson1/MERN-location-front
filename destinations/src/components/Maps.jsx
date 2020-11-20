@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import {GoogleMap, withScriptjs, withGoogleMap, Marker} from 'react-google-maps'
 
 const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_KEY
+Geocode.setApiKey(GOOGLE_MAP_API_KEY)
+
+
 function Map(){
       return (
             <GoogleMap 
@@ -22,6 +25,7 @@ export default class Maps extends Component {
                   loadingElement = {<div style= {{height: '100%'}} />}
                   containerElement = {<div style= {{height: '100%'}} />}
                   mapElement = {<div style= {{height: '100%'}} />}
+
                   />
                   </div>
             )
