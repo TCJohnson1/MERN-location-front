@@ -90,20 +90,27 @@ export default class NewForm extends Component {
               value="Add Destination"
             />
           </form>
-
-          <table className="centered responsive-table">
+<div>
+<table className="centered responsive-table">
             <thead>
               <tr>
-                <th>Name</th>
+                <th className="left">Name</th>
                 <th>Description</th>
+              
+                <th className="right">  <i class="material-icons">add</i>   <i class="material-icons">delete</i></th>
               </tr>
             </thead>
-            <tbody>
+            </table>
+         
               {
+                  
                 // Renders locations if there are any. If not, it tells user to add some
                 this.props.locations.length > 0 ? (
                   this.props.locations.map((location) => {
                     return (
+                        <table className="centered responsive-table">
+            
+            <tbody>
                       <tr key={location._id}>
                         <td>
                           {" "}
@@ -115,7 +122,7 @@ export default class NewForm extends Component {
                         </td>
                         <td>
                           {" "}
-                          <img id='newform' src={location.image} alt={location.name}></img>
+                          <img id='newform'src={location.image} alt={location.name}></img>
                         </td>
                         <td
                           className="waves-effect waves-light btn orange darken-4 white-text"
@@ -126,6 +133,8 @@ export default class NewForm extends Component {
                           DELETE
                         </td>
                       </tr>
+                      </tbody>
+          </table>
                     );
                   })
                 ) : (
@@ -141,8 +150,7 @@ export default class NewForm extends Component {
                   </div>
                 )
               }
-            </tbody>
-          </table>
+              </div>
         </div>
         <Footer />
       </>

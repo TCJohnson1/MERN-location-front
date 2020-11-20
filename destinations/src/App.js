@@ -83,7 +83,7 @@ export default class App extends Component {
               locations = {this.state.locations}
               />
             </Route>
-            <Route path='/show' exact component={Show} >
+            <Route path='/show' exact >
             <Show
             locations = {this.state.locations}
             />
