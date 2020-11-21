@@ -6,31 +6,40 @@ import Header from './Header';
 export default class Favorites extends Component {
       render() {
             return (
+
                   <div>
-                      <Header />
-                        <h3>Favorites</h3>
-                        <table>
-                              <thead>
-                                    <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Image</th>
-                                    </tr>
-                              </thead>
-                              <tbody>
+                        <Header />
+                        <div className="container">
+                              <h3>Favorites</h3>
+
+                              <div className='row'>
                                     {this.props.locations.map((location) => {
-                                          return(
-                                                <tr key={location._id}>
-                                                      <td>{location.name}</td>
-                                                      <td>{location.description}</td>
-                                                      <td>{location.image}</td>
-                                                </tr>
+                                          return ( location.favorite == true ? (
+                                                <div key={location._id} className="col s12 m7">
+                                                      <h4 id="cardheader" className="header">{location.name}</h4>
+                                                      <div className="card horizontal">
+                                                            <div className="card-image">
+                                                                  <img id="favoriteimg" src={location.image} />
+                                                            </div>
+                                                            <div className="card-stacked">
+                                                                  <div className="card-content">
+                                                                        <p>{location.description}</p>
+                                                                  </div>
+                                                                  <div className="card-action">
+                                                                        <a className="deep-orange-text" href="/show">view destination</a>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+                                                </div>) : ''
+                                                
                                           )
                                     })}
-                              </tbody>
-                        </table>
+                              </div>
+
+                        </div>
                         <Footer />
                   </div>
+
             )
       }
 }
