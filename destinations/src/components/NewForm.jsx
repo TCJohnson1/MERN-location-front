@@ -50,7 +50,6 @@ export default class NewForm extends Component {
     return (
       <>
         <Header />
-
         <div className="container">
           <h1>New Destination</h1>
 
@@ -108,7 +107,8 @@ export default class NewForm extends Component {
               // Renders locations if there are any. If not, it tells user to add some
               this.props.locations.length > 0 ? (
                 this.props.locations.map((location) => {
-                  return (
+                  return (<>
+                  
                     <table className="centered responsive-table">
 
                       <tbody>
@@ -128,19 +128,21 @@ export default class NewForm extends Component {
                           <td
                             className="waves-effect waves-light btn orange darken-4 white-text"
                             onClick={() => {
+                              // Deletes entry from database
                               this.props.deleteLocation(location._id);
                             }}
                           >
                             DELETE
                         </td>
-                          <td onClick={() => {this.props.toggleFavorite(location)}}
+                          <td className='btn waves-effect waves-light brown lighten-2' onClick={() => {this.props.toggleFavorite(location)}}
                           >
-                            &hearts;
+                             {/* checks to see locations has been favorited, then displays a heart or minus sign */}
+                            { location.favorite == false ? (<p>&hearts;</p>) : (<p>━━</p>) }
                         </td>
                         </tr>
                       </tbody>
                     </table>
-                  );
+                  </>);
                 })
               ) : (
                   <div className="row">

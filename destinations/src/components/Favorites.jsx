@@ -9,6 +9,7 @@ export default class Favorites extends Component {
 
                   <div>
                         <Header />
+                        <Link to='/newdestination' ><p className='btn blue lighten-3'>BACK</p></Link>
                         <div className="container">
                               <h3>Favorites</h3>
 
