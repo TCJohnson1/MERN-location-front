@@ -14,6 +14,8 @@ export default class Favorites extends Component {
 
                               <div className='row'>
                                     {this.props.locations.map((location) => {
+                                          // below checks if the location.favorite is true and displays a card if it is
+                                          // and displays nothing if its false
                                           return ( location.favorite == true ? (
                                                 <div key={location._id} className="col s12 m7">
                                                       <h4 id="cardheader" className="header">{location.name}</h4>
