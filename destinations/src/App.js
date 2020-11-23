@@ -12,10 +12,12 @@ import {
   Link,
   Route,
   Switch,
-  Redirect,
-} from "react-router-dom";
 
-const baseURL = "http://localhost:3001";
+  Redirect
+} from 'react-router-dom'
+//Changed baseURL
+const baseURL = "https://destinations-api-project3.herokuapp.com";
+
 
 export default class App extends Component {
   constructor(props) {
