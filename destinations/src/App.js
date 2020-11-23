@@ -18,9 +18,6 @@ import {
 const baseURL = "http://localhost:3001";
 
 
-
-
-
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -31,6 +28,7 @@ export default class App extends Component {
     this.getLocations = this.getLocations.bind(this)
     this.handleAddLocations = this.handleAddLocations.bind(this)
     this.deleteLocation = this.deleteLocation.bind(this)
+    this.toggleFavorite = this.toggleFavorite.bind(this)
   }
 
   componentDidMount() {
@@ -65,6 +63,23 @@ export default class App extends Component {
     })
   }
 
+  toggleFavorite = (location) => {
+    fetch(baseURL + '/locations/' + location._id, {
+      method: 'PUT',
+      body: JSON.stringify({favorite: !location.favorite}),
+      headers: {
+        'Content-Type' : 'application/json'
+      }
+    }).then(res => res.json())
+    .then(resJson => {
+      const copyLocations = [...this.state.locations]
+      const findIndex = this.state.locations.findIndex(location => location._id === resJson._id)
+      copyLocations[findIndex].favorite = resJson.favorite
+      this.setState({locations: copyLocations})
+    })
+}
+
+
   render() {
     return (
       <Router>
@@ -73,6 +88,7 @@ export default class App extends Component {
           <Switch>
             <Route path='/newdestination' >
               <NewForm
+              toggleFavorite={this.toggleFavorite}
                 deleteLocation={this.deleteLocation}
                 locations={this.state.locations}
                 handleAddLocations={this.handleAddLocations} />
