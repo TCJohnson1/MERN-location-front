@@ -2,34 +2,26 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Link} from "react-router-dom";
 import Footer from './Footer';
 import Header from './Header';
-
 const baseURL = "https://destinations-api-project3.herokuapp.com";
-
 export default class Favorites extends Component {
-
-
       showDestination = (id) => {
             fetch(baseURL + '/locations/' + id, {
-              method: 'GET',
-              headers: {
-                'Content-Type' : 'application/json'
-              }
+            method: 'GET',
+            headers: {
+                  'Content-Type' : 'application/json'
+            }
             }).then(res => res.json())
             .then(resJson => {
             this.props.handleChangeShow(resJson)
             })
-        }
-
-
+      }
       render() {
             return (
-
                   <div>
                         <Header />
                         <Link to='/newdestination' ><p className='btn blue lighten-3'>BACK</p></Link>
                         <div className="container">
                               <h3>Favorites</h3>
-
                               <div className='row'>
                                     {this.props.locations.map((location) => {
                                           // below checks if the location.favorite is true and displays a card if it is
@@ -55,13 +47,10 @@ export default class Favorites extends Component {
                                           )
                                     })}
                               </div>
-
                         </div>
                         <Footer />
                   </div>
-
             )
       }
 }
-
 
