@@ -141,7 +141,7 @@ export default class NewForm extends Component {
                           <td className='btn waves-effect waves-light brown lighten-2' onClick={() => {this.props.toggleFavorite(location)}}
                           >
                              {/* checks to see locations has been favorited, then displays a heart or minus sign */}
-                            { location.favorite == false ? (<p>&hearts;</p>) : (<p>━━</p>) }
+                            { location.favorite == false ? (<p>&hearts;</p>) : (<p>━</p>) }
                         </td>
 
                       </tr>

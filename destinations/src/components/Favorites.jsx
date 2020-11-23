@@ -29,7 +29,7 @@ export default class Favorites extends Component {
                                                                         <p>{location.description}</p>
                                                                   </div>
                                                                   <div className="card-action">
-                                                                        <a className="deep-orange-text" href="/show">view destination</a>
+                                                                        <a className="deep-orange-text"  href="/locations/id">view destination</a>
                                                                   </div>
                                                             </div>
                                                       </div>

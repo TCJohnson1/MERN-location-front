@@ -29,6 +29,7 @@ export default class App extends Component {
     this.handleAddLocations = this.handleAddLocations.bind(this)
     this.deleteLocation = this.deleteLocation.bind(this)
     this.toggleFavorite = this.toggleFavorite.bind(this)
+    this.showLocation = this.showLocation.bind(this)
   }
 
   componentDidMount() {
@@ -77,6 +78,21 @@ export default class App extends Component {
       copyLocations[findIndex].favorite = resJson.favorite
       this.setState({locations: copyLocations})
     })
+}
+
+
+showLocation(id) {
+  fetch(baseURL + '/locations/' + id, {
+    headers: {
+      'Content-Type' : 'application/json'
+    }
+  }).then(res => res.json())
+  .then(resJson => {
+    const copyLocations = [...this.state.locations]
+    const findIndex = this.state.locations.findIndex(location => location._id === resJson._id)
+    copyLocations[findIndex].favorite = resJson.favorite
+    this.setState({locations: copyLocations})
+  })
 }
 
 
