@@ -11,7 +11,7 @@ button {
   border-radius: 10px;
   font-size: 16px;
 }
-p {
+#about {
   width: 400px;
   
 }
@@ -53,3 +53,11 @@ p {
   text-align: center;
 }
 
+#newform,
+#favoriteimg {
+  max-width: 150px;
+}
+
+#cardheader {
+  color: #ff5722;
+}
