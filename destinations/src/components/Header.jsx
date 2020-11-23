@@ -33,7 +33,7 @@ export default class Header extends Component {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="#1" className="waves-effect waves-light teal-text lighten-5">Signup/Login</Link>
+                                <Link to="/newdestination" className="waves-effect waves-light teal-text lighten-5">Add destination</Link>
                             </li>
                         </ul>
                     </div>
@@ -47,7 +47,7 @@ export default class Header extends Component {
                         <Link to="/favorites" className="waves-effect waves-light teal-text lighten-5">My Favorites</Link>
                     </li>
                     <li>
-                        <Link to="#1" className="waves-effect waves-light teal-text lighten-5">Signup/Login</Link>
+                    <Link to="/newdestination" className="waves-effect waves-light teal-text lighten-5">Add destination</Link>
                         
                     </li>
                 </ul>

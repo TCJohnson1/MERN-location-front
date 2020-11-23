@@ -1,9 +1,26 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link} from "react-router-dom";
 import Footer from './Footer';
 import Header from './Header';
 
+const baseURL = "https://destinations-api-project3.herokuapp.com";
+
 export default class Favorites extends Component {
+
+
+      showDestination = (id) => {
+            fetch(baseURL + '/locations/' + id, {
+              method: 'GET',
+              headers: {
+                'Content-Type' : 'application/json'
+              }
+            }).then(res => res.json())
+            .then(resJson => {
+            this.props.handleChangeShow(resJson)
+            })
+        }
+
+
       render() {
             return (
 
@@ -17,7 +34,7 @@ export default class Favorites extends Component {
                                     {this.props.locations.map((location) => {
                                           // below checks if the location.favorite is true and displays a card if it is
                                           // and displays nothing if its false
-                                          return ( location.favorite == true ? (
+                                          return ( location.favorite === true ? (
                                                 <div key={location._id} className="col s12 m7">
                                                       <h4 id="cardheader" className="header">{location.name}</h4>
                                                       <div className="card horizontal">
@@ -29,7 +46,7 @@ export default class Favorites extends Component {
                                                                         <p>{location.description}</p>
                                                                   </div>
                                                                   <div className="card-action">
-                                                                        <a className="deep-orange-text"  href="/locations/id">view destination</a>
+                                                                        <Link onClick={() => this.showDestination(location._id)} className="deep-orange-text" to="/show">view destination</Link>
                                                                   </div>
                                                             </div>
                                                       </div>

@@ -17,10 +17,6 @@ import {
 
 const baseURL = "http://localhost:3001";
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 22bdf9867e8bee2aa2be76db182687a0f8134a7d
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -28,17 +24,11 @@ export default class App extends Component {
       locations: [],
     };
 
-<<<<<<< HEAD
-    this.getLocations = this.getLocations.bind(this);
-    this.handleAddLocations = this.handleAddLocations.bind(this);
-    this.deleteLocation = this.deleteLocation.bind(this);
-=======
     this.getLocations = this.getLocations.bind(this)
     this.handleAddLocations = this.handleAddLocations.bind(this)
     this.deleteLocation = this.deleteLocation.bind(this)
     this.toggleFavorite = this.toggleFavorite.bind(this)
     this.showLocation = this.showLocation.bind(this)
->>>>>>> 22bdf9867e8bee2aa2be76db182687a0f8134a7d
   }
 
   componentDidMount() {
@@ -121,11 +111,6 @@ showLocation(id) {
                 handleAddLocations={this.handleAddLocations}
               />
             </Route>
-<<<<<<< HEAD
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/404" component={Page404} />
-            <Redirect to="/404" />
-=======
             <Route path='/' exact component={LandingPage} />
             <Route path='/favorites'  >
               <Favorites
@@ -140,7 +125,6 @@ showLocation(id) {
             <Route path='/404' component={Page404} />
             <Redirect to='/404' />
 
->>>>>>> 22bdf9867e8bee2aa2be76db182687a0f8134a7d
           </Switch>
         </div>
       </Router>
