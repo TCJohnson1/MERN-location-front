@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-const baseURL = "http://localhost:3001";
+const baseURL = "https://destinations-api-project3.herokuapp.com";
 
 export default class NewForm extends Component {
   constructor(props) {

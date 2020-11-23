@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link} from "react-router-dom";
 import Footer from './Footer';
 import Header from './Header';
 
-const baseURL = "http://localhost:3001";
+const baseURL = "https://destinations-api-project3.herokuapp.com";
 
 export default class Favorites extends Component {
 

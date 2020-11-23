@@ -15,7 +15,7 @@ import {
   Redirect
 } from 'react-router-dom'
 
-const baseURL = "http://localhost:3001";
+const baseURL = "https://destinations-api-project3.herokuapp.com";
 
 
 export default class App extends Component {
