@@ -46,10 +46,14 @@ export default class NewForm extends Component {
   }
 
 
+
+
+
   render() {
     return (
       <>
         <Header />
+
         <div className="container">
           <h1>New Destination</h1>
 
@@ -90,7 +94,6 @@ export default class NewForm extends Component {
               value="Add Destination"
             />
           </form>
-
 <div>
 <table className="centered responsive-table">
             <thead>
@@ -124,43 +127,8 @@ export default class NewForm extends Component {
                         <td>
                           {" "}
                           <img id='newform'src={location.image} alt={location.name}></img>
-
-          <div>
-            <table className="centered responsive-table">
-              <thead>
-                <tr>
-                  <th className="left">Name</th>
-                  <th>Description</th>
-
-                  <th className="right">  <i className="material-icons">add</i>   <i className="material-icons">delete</i></th>
-                </tr>
-              </thead>
-            </table>
-
-            {
-
-              // Renders locations if there are any. If not, it tells user to add some
-              this.props.locations.length > 0 ? (
-                this.props.locations.map((location) => {
-                  return (<>
-                  
-                    <table className="centered responsive-table">
-
-                      <tbody>
-                        <tr key={location._id}>
-                          <td>
-                            {" "}
-                            <p>{location.name}</p>{" "}
-                          </td>
-                          <td>
-                            {" "}
-                            <p>{location.description}</p>{" "}
-                          </td>
-                          <td>
-                            {" "}
-                            <img id='newform' src={location.image} alt={location.name}></img>
-                          </td>
-                          <td
+                        </td>
+                        <td
                             className="waves-effect waves-light btn orange darken-4 white-text"
                             onClick={() => {
                               // Deletes entry from database
@@ -182,14 +150,6 @@ export default class NewForm extends Component {
                     );
                   })
                 ) : (
-
-                        </tr>
-                      </tbody>
-                    </table>
-                  </>);
-                })
-              ) : (
-
                   <div className="row">
                     <div className="col s12 m5 ">
                       <div className="card-panel brown lighten-3 ">
@@ -201,16 +161,12 @@ export default class NewForm extends Component {
                     </div>
                   </div>
                 )
-
               }
               </div>
-
-            }
-          </div>
-
         </div>
         <Footer />
       </>
     );
   }
 }
+
