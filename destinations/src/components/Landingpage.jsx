@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
                 id="my-list-button"
                 className="btn waves-effect waves-orange darken-4"
               >
-                My List/ add new
+                My List | Add New
               </a>
             </div>
             <div className="cool-image">
@@ -28,15 +28,30 @@ export default class LandingPage extends Component {
               ></img>
             </div>
             <div>
-            <center>
-            <h5 className='deep-orange-text'>Welcome to Dream Destinations! </h5>
-                <p>If you've ever wanted to have your own travel destination bucket list, <b className='teal-text darken-4'><i>well now you can</i></b>. Find a location by name or if you're feeling lucky you can play <b className='teal-text darken-4'><i>'destination roulette'</i></b> to find a random location. Once you find somewhere you would like to visit, simply add it to your favorites to come back to later.</p>
-                </center>
+              <center>
+                <h5 className="deep-orange-text">
+                  Welcome to Dream Destinations!{" "}
+                </h5>
+                <p id="about">
+                  If you've ever wanted to have your own travel destination
+                  bucket list,{" "}
+                  <b className="teal-text darken-4">
+                    <i>well now you can</i>
+                  </b>
+                  . Find a location by name or if you're feeling lucky you can
+                  play{" "}
+                  <b className="teal-text darken-4">
+                    <i>'destination roulette'</i>
+                  </b>{" "}
+                  to find a random location. Once you find somewhere you would
+                  like to visit, simply add it to your favorites to come back to
+                  later.
+                </p>
+              </center>
             </div>
-            
 
             <hr className="horizontal-bar"></hr>
-            <div className="random-destination-button">
+            {/* <div className="random-destination-button">
               <button
                 id="random-destination-button"
                 className="btn waves-effect waves-orange darken-4"
@@ -64,7 +79,7 @@ export default class LandingPage extends Component {
                   Add to my List
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
         </main>
 
