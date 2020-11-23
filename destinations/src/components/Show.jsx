@@ -4,23 +4,22 @@ import Footer from './Footer';
 import Header from './Header';
 
 export default class Show extends Component {
- 
-
-      render() {
-            return (
-                <>
-                     <Header />
-
-                  <div className="container">
-                 <h3>{this.props.locations.name}</h3>
-                 <img id="showimg" src={this.props.locations.image}/>
-                 <p>{this.props.locations.description}</p>
-                  </div>
-
-                 
-
-                  <Footer />
-                 </>
-            )
-      }
+  constructor(props) {
+        super(props)
+  }
+  
+  
+  render() {
+        return (
+            <>
+                <Header />
+                <div className="container">
+            <h3>{this.props.show.name}</h3>
+            <img id="showimg" src={this.props.show.image}/>
+            <p>{this.props.show.description}</p>
+              </div>
+              <Footer />
+              </>
+        )
+  }
 }
