@@ -19,7 +19,7 @@ export default class Favorites extends Component {
             return (
                   <div>
                         <Header />
-                        <Link to='/newdestination' ><p className='btn blue lighten-3'>BACK</p></Link>
+                        <Link to='/newdestination' ><p className='btn blue lighten-3'>BACK!</p></Link>
                         <div className="container">
                               <h3>Favorites</h3>
                               <div className='row'>
