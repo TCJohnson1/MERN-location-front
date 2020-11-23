@@ -22,13 +22,15 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      locations: []
+      locations: [],
+      show: {}
     }
 
     this.getLocations = this.getLocations.bind(this)
     this.handleAddLocations = this.handleAddLocations.bind(this)
     this.deleteLocation = this.deleteLocation.bind(this)
     this.toggleFavorite = this.toggleFavorite.bind(this)
+    this.handleChangeShow = this.handleChangeShow.bind(this)
   }
 
   componentDidMount() {
@@ -52,6 +54,7 @@ export default class App extends Component {
       })
   }
 
+ 
   deleteLocation(id) {
     fetch(baseURL + '/locations/' + id, {
       method: 'DELETE'
@@ -79,6 +82,12 @@ export default class App extends Component {
     })
 }
 
+handleChangeShow(obj) {
+  this.setState({
+    show: obj
+  })
+}
+
 
   render() {
     return (
@@ -97,11 +106,13 @@ export default class App extends Component {
             <Route path='/favorites'  >
               <Favorites
               locations = {this.state.locations}
+              handleChangeShow = {this.handleChangeShow}
               />
             </Route>
             <Route path='/show' exact >
             <Show
             locations = {this.state.locations}
+            show = {this.state.show}
             />
             </Route>
             <Route path='/404' component={Page404} />
