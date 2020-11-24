@@ -16,10 +16,9 @@ Dream Destinations is a travel destinations bucket list application. You can add
 
 ## Technologies Used
 
-* React.js
-* react-router-dom
-* react-scripts
-* Materialize.css - css framework used to stylize the application.
+* [React.js](https://reactjs.org/)
+* [React router](https://reactrouter.com/web/guides/quick-start)
+* [Materialize.css](https://materializecss.com/) - css framework used to stylize the application.
 
 ## Features
 * Multiple page application using react router.
