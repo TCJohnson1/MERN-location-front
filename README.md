@@ -1,11 +1,11 @@
-# MERN-location-front
+# Dream Destinations: Front-end
 
-## Collaborators:
+### Collaborators:
 
-### 1. David Ornelas
+#### 1. David Ornelas
 
-### 2. Fabiola (Fabi) Pina
+#### 2. Fabiola (Fabi) Pina
 
-### 3. Sara Kendig
+#### 3. Sara Kendig
 
-### 4. Terrence Johnson
+#### 4. Terrence Johnson
