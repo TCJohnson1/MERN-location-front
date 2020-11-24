@@ -1,7 +1,7 @@
 # Dream Destinations: Front-end
 
-[application](https://mern-destinations.herokuapp.com/)
-[back-end documentation](https://github.com/davidornelas11/MERN-location-app)
+* [application](https://mern-destinations.herokuapp.com/)
+* [back-end documentation](https://github.com/davidornelas11/MERN-location-app)
 
 ## What is it?
 Dream Destinations is a travel destinations bucket list application. You can add travel spots you'd like to go to using the name, description and image of the destination. You can then add your favorites to a seperate list to keep them handy.
