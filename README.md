@@ -8,10 +8,10 @@ Dream Destinations is a travel destinations bucket list application. You can add
 
 ### Collaborators:
 
-[David Ornelas](http://linkedin.com/in/davidornelas-engineer)
-[Fabiola (Fabi) Pina](https://www.linkedin.com/in/fabiolampina/)
-[Sara Kendig](https://www.linkedin.com/in/sarakendig/)
-[Terrence Johnson](https://www.linkedin.com/in/terrence-c-johnson2/)
+*  [David Ornelas](http://linkedin.com/in/davidornelas-engineer)
+*  [Fabiola (Fabi) Pina](https://www.linkedin.com/in/fabiolampina/)
+*  [Sara Kendig](https://www.linkedin.com/in/sarakendig/)
+*  [Terrence Johnson](https://www.linkedin.com/in/terrence-c-johnson2/)
 
 
 ## Technologies Used
